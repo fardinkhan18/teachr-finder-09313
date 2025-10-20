@@ -1,43 +1,38 @@
-import { Card } from '@/components/ui/card';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { Quote } from 'lucide-react';
+import { motion } from "motion/react";
+import { TestimonialsColumn } from '@/components/ui/testimonials-columns';
 import { testimonials } from '@/data/landing';
+
+const firstColumn = testimonials.slice(0, 3);
+const secondColumn = testimonials.slice(3, 6);
+const thirdColumn = testimonials.slice(6, 9);
 
 export function Testimonials() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-emerald-50/30 to-white">
-      <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
+    <section className="bg-background py-20 relative">
+      <div className="container z-10 mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center justify-center max-w-[540px] mx-auto"
+        >
+          <div className="flex justify-center">
+            <div className="border py-1 px-4 rounded-lg text-sm">ব্যবহারকারীদের মতামত</div>
+          </div>
+
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5 text-center">
             ব্যবহারকারীদের অভিজ্ঞতা
           </h2>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {testimonials.map((testimonial) => (
-            <Card 
-              key={testimonial.id}
-              className="p-6 rounded-2xl border shadow-sm hover:shadow-md transition-all duration-300"
-            >
-              <Quote className="h-8 w-8 text-primary/20 mb-4" />
-              <p className="text-foreground mb-6 leading-relaxed">
-                "{testimonial.quote}"
-              </p>
-              <div className="flex items-center gap-3">
-                <Avatar className="h-10 w-10">
-                  <AvatarFallback className="bg-primary/10 text-primary font-semibold">
-                    {testimonial.name.charAt(0)}
-                  </AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="font-semibold text-sm">{testimonial.name}</p>
-                  <p className="text-xs text-muted-foreground">
-                    {testimonial.role} • {testimonial.area}
-                  </p>
-                </div>
-              </div>
-            </Card>
-          ))}
+          <p className="text-center mt-5 opacity-75">
+            আমাদের প্ল্যাটফর্ম সম্পর্কে ব্যবহারকারীদের মতামত দেখুন।
+          </p>
+        </motion.div>
+
+        <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+          <TestimonialsColumn testimonials={firstColumn} duration={15} />
+          <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
+          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
         </div>
       </div>
     </section>
