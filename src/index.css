@@ -17,12 +17,12 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 10%;
 
-    /* Professional blue for trust & education */
-    --primary: 217 91% 48%;
+    /* Emerald primary for educational calm theme */
+    --primary: 160 84% 39%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 217 91% 42%;
+    --primary-hover: 160 84% 35%;
 
-    /* Emerald accent for CTAs */
+    /* Secondary emerald accent */
     --accent: 160 84% 39%;
     --accent-foreground: 0 0% 100%;
     --accent-hover: 160 84% 35%;
@@ -63,9 +63,10 @@ All colors MUST be HSL.
     --sidebar-border: 214 32% 91%;
     --sidebar-ring: 217 91% 48%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 48%) 0%, hsl(160 84% 39%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(214 32% 98%) 100%);
+    /* Gradients - subtle emerald tints */
+    --gradient-hero: linear-gradient(135deg, hsl(160 84% 97%) 0%, hsl(160 50% 95%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(160 30% 98%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(160 20% 97%) 100%);
     
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
