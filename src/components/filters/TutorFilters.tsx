@@ -53,7 +53,6 @@ export function TutorFilters({ filters, onFiltersChange }: TutorFiltersProps) {
               <SelectValue placeholder="All" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Universities</SelectItem>
               {universities.map((u) => (
                 <SelectItem key={u} value={u}>
                   {u}
@@ -73,7 +72,6 @@ export function TutorFilters({ filters, onFiltersChange }: TutorFiltersProps) {
               <SelectValue placeholder="All" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Departments</SelectItem>
               {departments.map((d) => (
                 <SelectItem key={d} value={d}>
                   {d}
@@ -93,7 +91,6 @@ export function TutorFilters({ filters, onFiltersChange }: TutorFiltersProps) {
               <SelectValue placeholder="All" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Sessions</SelectItem>
               {sessions.map((s) => (
                 <SelectItem key={s} value={s}>
                   {s}
@@ -113,7 +110,6 @@ export function TutorFilters({ filters, onFiltersChange }: TutorFiltersProps) {
               <SelectValue placeholder="All" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Subjects</SelectItem>
               {subjects.map((s) => (
                 <SelectItem key={s} value={s}>
                   {s}
@@ -133,7 +129,6 @@ export function TutorFilters({ filters, onFiltersChange }: TutorFiltersProps) {
               <SelectValue placeholder="All" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Areas</SelectItem>
               {areas.map((a) => (
                 <SelectItem key={a} value={a}>
                   {a}
@@ -153,7 +148,6 @@ export function TutorFilters({ filters, onFiltersChange }: TutorFiltersProps) {
               <SelectValue placeholder="All" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Modes</SelectItem>
               <SelectItem value="ONLINE">Online</SelectItem>
               <SelectItem value="OFFLINE">Offline</SelectItem>
               <SelectItem value="HYBRID">Hybrid</SelectItem>
