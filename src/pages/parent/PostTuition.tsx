@@ -154,7 +154,6 @@ export default function PostTuition() {
                     <SelectValue placeholder="Select area" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">Not specified</SelectItem>
                     {areas.map((a) => (
                       <SelectItem key={a} value={a}>
                         {a}
